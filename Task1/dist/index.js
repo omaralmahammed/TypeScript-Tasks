@@ -70,6 +70,7 @@ function SumNumbers(...arr) {
 }
 console.log(SumNumbers(3, 4, 6, 7, -3, 0));
 console.log("//////////////////////////////////////////////////////");
+console.log("posirtive number");
 //Check if All Elements in Array are Positive
 function CheckPositiveNumbers(...arr) {
     let states = "All Positive";
@@ -111,4 +112,40 @@ function NumberOfCharacter(word, character) {
     return number;
 }
 console.log(NumberOfCharacter("ahmmd", "m"));
+console.log("//////////////////////////////////////////////////////");
+console.log("");
+console.log("Day 3 Task");
+console.log("");
+console.log("//////////////////////////////////////////////////////");
+const personOne = {
+    name: "Omar",
+    age: 24,
+};
+if (personOne.age > 18) {
+    console.log(personOne.name + "is an Adult");
+}
+else {
+    console.log(personOne.name + "is an Minor");
+}
+//You are given an object that follows an interface Teacher with properties name and subjects (an array of subjects). Print all the subjects the teacher teaches.
+console.log("");
+console.log("//////////////////////////////////////////////////////");
+const teacherOne = {
+    name: "Omar",
+    subjects: ["Programming", "Math"],
+};
+console.log(teacherOne.subjects);
+console.log("");
+console.log("//////////////////////////////////////////////////////");
+var productList = [
+    { name: "Apple", price: 10, quantity: 3 },
+    { name: "Orange", price: 100, quantity: 7 },
+    { name: "Banana", price: 10, quantity: 3 },
+];
+productList.forEach((product) => {
+    if (product.quantity > 5) {
+        product.price = product.price * 0.9;
+    }
+    console.log(product);
+});
 //# sourceMappingURL=index.js.map

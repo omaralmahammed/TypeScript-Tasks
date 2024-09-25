@@ -88,6 +88,7 @@ function SumNumbers(...arr: number[]): number {
 console.log(SumNumbers(3, 4, 6, 7, -3, 0));
 
 console.log("//////////////////////////////////////////////////////");
+console.log("posirtive number");
 //Check if All Elements in Array are Positive
 function CheckPositiveNumbers(...arr: number[]): string {
   let states: string = "All Positive";
@@ -139,3 +140,91 @@ function NumberOfCharacter(word: string, character: string): number {
 }
 
 console.log(NumberOfCharacter("ahmmd", "m"));
+console.log("//////////////////////////////////////////////////////");
+console.log("");
+console.log("Day 3 Task");
+console.log("");
+console.log("//////////////////////////////////////////////////////");
+
+//You are given an object that follows an interface Person with properties name and age. Check if the age is above 18 and print "Adult" if true, otherwise print "Minor."
+interface Person {
+  name: string;
+  age: number;
+}
+
+const personOne: Person = {
+  name: "Omar",
+  age: 24,
+};
+
+if (personOne.age > 18) {
+  console.log(personOne.name + "is an Adult");
+} else {
+  console.log(personOne.name + "is an Minor");
+}
+
+//You are given an object that follows an interface Teacher with properties name and subjects (an array of subjects). Print all the subjects the teacher teaches.
+console.log("");
+console.log("//////////////////////////////////////////////////////");
+
+interface Teacher {
+  name: string;
+  subjects: string[];
+}
+
+const teacherOne: Teacher = {
+  name: "Omar",
+  subjects: ["Programming", "Math"],
+};
+
+console.log(teacherOne.subjects);
+
+console.log("");
+console.log("//////////////////////////////////////////////////////");
+
+//You are given an array of Product interfaces, where each product has a name, price, and quantity. Write a script to increase the price of each product by 10% if the quantity is greater than 5.
+
+interface Product {
+  name: string;
+  price: number;
+  quantity: number;
+}
+
+var productList: Product[] = [
+  { name: "Apple", price: 10, quantity: 3 },
+  { name: "Orange", price: 100, quantity: 7 },
+  { name: "Banana", price: 10, quantity: 3 },
+];
+
+productList.forEach((product) => {
+  if (product.quantity > 5) {
+    product.price = product.price * 0.9;
+  }
+
+  console.log(product);
+});
+
+console.log("");
+console.log("//////////////////////////////////////////////////////");
+
+interface Device {
+  start?(): void;
+}
+
+let D: Device = {
+  start() {
+    console.log("Device has start");
+  },
+};
+
+let D2: Device = {};
+
+if (D.start) {
+  console.log("Device a has start function");
+} else {
+  console.log("Device doesn't have start function");
+}
+
+let check2 = D2.start
+  ? console.log("Device has a start function")
+  : console.log("Device doesn't a have start function");
